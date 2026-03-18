@@ -1,0 +1,29 @@
+forecasts:
+  first_year: 1993
+  last_year: 2022
+  months:
+    - 3
+    - 6
+    - 9
+    - 12
+  ensemble_size: 2
+
+climatology:
+  first_year: 1993
+  last_year: 2019
+
+domain:
+  # Gulf of Alaska (GOA) regional bounds
+  south_lat: 44
+  north_lat: 66
+  west_lon: 190
+  east_lon: 235
+
+filesystem:
+  # GOA SPEAR atmospheric forcing output path
+  # (target location for processed SPEAR-atm files)
+  spear_atm_output: /work/acr/mom6/goa/forecast_input_data/spear_atm
+
+  # Optional template path if raw SPEAR atmospheric archives are stored by year/month/ensemble
+  # Adjust the pattern to match your source layout.
+  spear_atm_source_template: /archive/acr/fre/spear/{year}/{month:02d}/ens{ensemble:02d}/
